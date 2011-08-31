@@ -24,13 +24,13 @@ Either manually clone this repository into your node_modules directory, or the r
  * file     => path to the file to be uploaded
  * callback => (errror, result)
 
-> getUrlReport(resource, [scan], callback) - Retrieve a URL scan report
+> getUrlReport(resource, [scan], callback) - Retrieve an URL scan report
 
  * resource => URL | md5-timestamp identifier
  * scan     => [optional] when set to "1" will automatically submit the URL for analysis if no report is found
  * callback => (errror, result)
 
-> scanUrl(url, callback) - Submit and scan a URL
+> scanUrl(url, callback) - Submit and scan an URL
 
  * url      => URL that should be scanned
  * callback => (errror, result)
