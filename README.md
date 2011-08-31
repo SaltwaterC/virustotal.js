@@ -1,12 +1,18 @@
 ## About
 
-VirusTotal API client for node.js. Currently under development and somehow usable.
+VirusTotal API client for node.js.
+
+## Installation
+
+Either manually clone this repository into your node_modules directory, or the recommended method:
+
+> npm install virustotal.js
 
 ## Reference
 
-> setKey(key) - Set the VirusTotal API key.
+> setKey(key) - Set the [VirusTotal API key](https://www.virustotal.com/vt-community/inbox.html).
 
- * key => string containing the API key
+ * key      => string containing the API key
 
 > getFileReport(resource, callback) - Retrieve a file scan report
 
@@ -29,6 +35,20 @@ VirusTotal API client for node.js. Currently under development and somehow usabl
  * url      => URL that should be scanned
  * callback => (errror, result)
 
+> makeFileComment(fileHash, comment, [tags], callback) - Make comments on files
+
+ * fileHash => md5 | sha1 | sha256 of the file that you want to comment on
+ * comment  => the actual comment
+ * tags     => [optional] array containing the list of tags
+ * callback => (errror, result)
+
+> makeUrlComment(url, comment, [tags], callback) - Make comments on URLs
+
+ * url      => the URL itself that you want to comment on
+ * comment  => the actual comment
+ * tags     => [optional] array containing the list of tags
+ * callback => (errror, result)
+
 ## Usage mode
 
 ```javascript
@@ -43,6 +63,6 @@ vt.scanFile('/path/to/file.foo.bar', function (err, res) {
 });
 ```
 
-## Currently Not Implemented
+## Error Handling
 
- * make_comment
+Unless there's a coding error, the library returns the error as the error argument of the callback. Otherwise it throws Error()s. Except the tags for the comments, there's no syntax validation before sending the arguments to the VirusTotal API. Validating the input before sending it (such as checking that a hash has a proper syntax) is planned, but it has low priority on my TODO list.
