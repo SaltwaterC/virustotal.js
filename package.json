@@ -1,5 +1,19 @@
 {
 	"name": "virustotal.js",
+	"version": "0.1.0",
 	"main": "./lib/virustotal.js",
-	"version": "0.1.0"
+	"description": "VirusTotal API client for node.js.",
+	"engines": {
+		"node": ">=0.4.2"
+	},
+	"homepage": "https://github.com/SaltwaterC/virustotal.js",
+	"author": {
+		"name": "Stefan Rusu",
+		"url": "http://www.saltwaterc.eu/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/SaltwaterC/virustotal.js.git"
+	},
+	"keywords": ["virustotal", "api", "https", "scan"]
 }
