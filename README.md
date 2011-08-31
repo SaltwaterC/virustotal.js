@@ -52,7 +52,7 @@ Either manually clone this repository into your node_modules directory, or the r
 ## Usage mode
 
 ```javascript
-var vt = require('virustotal.js'); // need to be in node_modules to work like this
+var vt = require('virustotal.js');
 vt.setKey('your-api-key');
 vt.scanFile('/path/to/file.foo.bar', function (err, res) {
 	if (err) {
