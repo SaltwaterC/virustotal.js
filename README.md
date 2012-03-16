@@ -44,7 +44,7 @@ Either manually clone this repository into your node_modules directory, or the r
 
 You may add the hashtags as part of the comment itself. If you add tags to the 'tags' argument, they are automatically appended to the comment argument. You may omit the # prefix of the tags array. It is automatically added if it's missing.
 
-makeComment(hash, 'foo', ['bar', 'baz'], [...]) is goint to evaluate the comment as: 'foo #bar #baz'.
+makeComment(hash, 'foo', ['bar', 'baz'], [...]) is going to evaluate the comment as: 'foo #bar #baz'.
 
 ## Usage mode
 
