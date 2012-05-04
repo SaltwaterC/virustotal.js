@@ -1,6 +1,6 @@
 {
 	"name": "virustotal.js",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"main": "./lib/virustotal.js",
 	"description": "VirusTotal API client for node.js.",
 	"engines": {
