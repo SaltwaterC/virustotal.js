@@ -1,3 +1,6 @@
+## v0.2.2
+ * Avoids a possible race condition for scanFile() when a Read Stream error event is emitted.
+
 ## v0.2.1
  * Added the possibility to pass a stream to scanFile().
 
