@@ -51,7 +51,7 @@ makeComment(hash, 'foo', ['bar', 'baz'], [...]) is going to evaluate the comment
 ```javascript
 var vt = require('virustotal.js');
 vt.setKey('your-api-key');
-vt.scanFile('/path/to/file.foo.bar', function (err, res) {
+vt.scanFile({filename: 'foo.exe', size: 1024, stream: readableStreamInstance}, function (err, res) {
 	if (err) {
 		console.error(err);
 	} else {
