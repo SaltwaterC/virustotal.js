@@ -1,3 +1,7 @@
+## v0.2.3
+ * jslint compliant.
+ * Deprecated the possibility to pass file paths to the scanFile() method.
+
 ## v0.2.2
  * Avoids a possible race condition for scanFile() when a Read Stream error event is emitted.
 

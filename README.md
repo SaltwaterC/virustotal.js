@@ -19,10 +19,10 @@ Either manually clone this repository into your node_modules directory, or the r
  * resource => md5 | sha1 | sha256 | sha256-timestamp identifier aka scan_id | CVS list made up of a combination of hashes and scan_ids
  * callback => (errror, result)
 
-> scanFile(file | streamWrapper, callback) - Send and scan a file
+> scanFile(streamWrapper, callback) - Send and scan a file
 
- * file     => path to the file to be uploaded | streamWrapper => an object containing the following keys: filename (the original file name), size (the size of the stream, in bytes), stream (the Readable Stream instance)
- * callback => (errror, result)
+ * streamWrapper => an object containing the following keys: filename (the original file name), size (the size of the stream, in bytes), stream (the Readable Stream instance)
+ * callback      => (errror, result)
 
 > getUrlReport(resource, [scan], callback) - Retrieve an URL scan report
 
