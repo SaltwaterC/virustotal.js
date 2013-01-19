@@ -1,4 +1,4 @@
-## About [!stillmaintained](http://stillmaintained.com/SaltwaterC/virustotal.js.png)
+## About ![stillmaintained](http://stillmaintained.com/SaltwaterC/virustotal.js.png)
 
 VirusTotal API client for node.js.
 
