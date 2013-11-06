@@ -1,10 +1,17 @@
 {
 	"name": "virustotal.js",
-	"version": "0.2.3",
+	"version": "0.3.0-dev",
 	"main": "./lib/virustotal.js",
 	"description": "VirusTotal API client for node.js.",
 	"engines": {
-		"node": ">=0.4.2"
+		"node": ">=0.8.5"
+	},
+	"dependencies": {
+		"http-request": ">= 0.6.0"
+	},
+	"devDependencies": {
+		"jslint": ">= 0.1.9",
+		"js-beautify": ">= 0.4.2"
 	},
 	"homepage": "https://github.com/SaltwaterC/virustotal.js",
 	"author": {

@@ -1,8 +1,14 @@
 all:
-	/usr/bin/env npm install
+	@/usr/bin/env npm install
 
 publish: all
-	/usr/bin/env npm publish
+	@/usr/bin/env npm publish
 
-lint:
-	tools/lint.sh
+lint: all
+	@tools/lint.sh
+
+beautify:
+	@tools/beautify.sh
+
+clean:
+	rm -rf node_modules
