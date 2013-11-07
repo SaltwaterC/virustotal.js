@@ -11,7 +11,9 @@
 	},
 	"devDependencies": {
 		"jslint": ">= 0.1.9",
-		"js-beautify": ">= 0.4.2"
+		"js-beautify": ">= 0.4.2",
+		"mocha": ">= 1.14.0",
+		"chai": ">= 1.8.1"
 	},
 	"homepage": "https://github.com/SaltwaterC/virustotal.js",
 	"author": {

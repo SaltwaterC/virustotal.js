@@ -1,3 +1,7 @@
+.PHONY: all
+.DEFAULT: all
+REPORTER ?= dot
+
 all:
 	@/usr/bin/env npm install
 
@@ -12,3 +16,14 @@ beautify:
 
 clean:
 	rm -rf node_modules
+
+tests: test
+check: test
+test: all lint
+	@./node_modules/.bin/mocha --reporter $(REPORTER) -g LOCAL
+
+fulltest: all
+	@./node_modules/.bin/mocha --reporter $(REPORTER)
+
+doc:
+	jsdoc --destination ../docs lib README.md
