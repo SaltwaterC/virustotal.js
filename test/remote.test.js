@@ -1,6 +1,6 @@
 'use strict';
 
-/*global describe: true, it: true, before: true, after: true*/
+/*global describe: true, it: true */
 
 var lib = require('../');
 var assert = require('chai').assert;
@@ -15,8 +15,10 @@ describe('REMOTE tests', function() {
 				assert.ifError(err);
 				assert.isNull(err);
 
+				/*jshint camelcase: false */
 				assert.strictEqual(res.response_code, 1);
 				assert.strictEqual(res.verbose_msg, 'Domain found in dataset');
+				/*jshint camelcase: true */
 
 				done();
 			});
@@ -31,7 +33,9 @@ describe('REMOTE tests', function() {
 					assert.ifError(err);
 					assert.isNull(err);
 
+					/*jshint camelcase: false */
 					assert.strictEqual(res.response_code, 1);
+					/*jshint camelcase: true */
 					assert.strictEqual(res.resource, '2fc19a61b81055c199f23de35b7eb8b2827e283442965bc1898c0e044563d836');
 
 					done();
@@ -45,10 +49,12 @@ describe('REMOTE tests', function() {
 			lib.getIpReport('417.216.55.69', function(err, res) {
 				assert.instanceOf(err, Error);
 
+				/*jshint camelcase: false */
 				assert.strictEqual(err.json.response_code, 0);
 				// this is odd since the service claims accepting only IPv4 addresses
 				// but the above address is taken from one of the many CSI fails
 				assert.strictEqual(err.json.verbose_msg, 'IP address not found in dataset');
+				/*jshint camelcase: true */
 
 				assert.isUndefined(res);
 
@@ -63,7 +69,9 @@ describe('REMOTE tests', function() {
 				assert.ifError(err);
 				assert.isNull(err);
 
+				/*jshint camelcase: false */
 				assert.strictEqual(res.response_code, 1);
+				/*jshint camelcase: true */
 				assert.strictEqual(res.url, 'http://example.org/');
 
 				done();

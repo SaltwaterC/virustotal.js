@@ -1,6 +1,6 @@
 ## About
 
-VirusTotal API 2.0 client for node.js.
+VirusTotal API 2.0 client for node.js. Supports both the Public and the Private API.
 
 ## Installation
 
@@ -15,7 +15,7 @@ VirusTotal API 2.0 client for node.js.
  * [getUrlReport(resource, [scan,] callback)](http://saltwaterc.github.io/virustotal.js/module-virustotal.html#getUrlReport) - Retrieve an URL scan report
  * [makeComment(resource, comment, [tags,] callback)](http://saltwaterc.github.io/virustotal.js/module-virustotal.html#makeComment) - Creates a new comment for file/URL
  * [rescanFile(resource, callback)](http://saltwaterc.github.io/virustotal.js/module-virustotal.html#rescanFile) - Rescan already submitted files
- * [scanFile(resource, callback)](http://saltwaterc.github.io/virustotal.js/module-virustotal.html#scanFile) - Send and scan a file
+ * [scanFile(resource, [options], callback)](http://saltwaterc.github.io/virustotal.js/module-virustotal.html#scanFile) - Send and scan a file
  * [scanUrl(resource, callback)](http://saltwaterc.github.io/virustotal.js/module-virustotal.html#scanUrl) - Submit and scan a URL
 
 ## Usage mode
@@ -30,6 +30,5 @@ virustotal.scanFile('file.exe', function (err, res) {
 	}
 	
 	console.log(res);
-	
 });
 ```

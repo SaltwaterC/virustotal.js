@@ -9,7 +9,7 @@ publish: all
 	@/usr/bin/env npm publish
 
 lint: all
-	@tools/lint.sh
+	@tools/lint.sh lib test
 
 beautify:
 	@tools/beautify.sh
