@@ -1,6 +1,9 @@
 ## v0.4
  * Added private parameters support to the methods that are both part of the Public and Private API. The private parameters require a Private API key.
 
+## v0.3.1
+ * Patches the poor handling of the API quotas where the response is a 204 response instead of an error. Closes #1.
+
 ## v0.3
  * Library rewrite to use [http-request](https://github.com/SaltwaterC/http-request) as the HTTP layer.
  * Added the new methods from VT Public API v2.0: rescanFile(), getIpReport(), getDomainReport().
