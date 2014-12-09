@@ -23,7 +23,7 @@ test: all lint
 	@./node_modules/.bin/mocha --reporter $(REPORTER) -g LOCAL
 
 fulltest: all
-	@./node_modules/.bin/mocha --reporter $(REPORTER)
+	@./node_modules/.bin/mocha --reporter $(REPORTER) --timeout 10000
 
 doc:
 	jsdoc --destination ../docs lib README.md
