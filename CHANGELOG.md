@@ -1,5 +1,6 @@
 ## v0.4
  * Added private parameters support to the methods that are both part of the Public and Private API. The private parameters require a Private API key.
+ * Added a new method: setHttpHeaders.
 
 ## v0.3.1
  * Patches the poor handling of the API quotas where the response is a 204 response instead of an error. Closes #1.

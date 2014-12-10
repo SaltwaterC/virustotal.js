@@ -11,6 +11,9 @@ describe('REMOTE tests', function() {
 
 	describe('REMOTE getDomainReport()', function() {
 		it('should return a domain report', function(done) {
+			lib.setHttpHeaders({
+				connection: 'close'
+			});
 			lib.getDomainReport('example.com', function(err, res) {
 				assert.ifError(err);
 				assert.isNull(err);
@@ -19,6 +22,8 @@ describe('REMOTE tests', function() {
 				assert.strictEqual(res.response_code, 1);
 				assert.strictEqual(res.verbose_msg, 'Domain found in dataset');
 				/*jshint camelcase: true */
+
+				lib.setHttpHeaders({});
 
 				done();
 			});
